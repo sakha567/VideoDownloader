@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unduh Tutorial ⚡</title>
+  <!-- Font Awesome untuk ikon keren -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at 20% 30%, #1e1b4b, #0b0b1f);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .card {
+      background: rgba(10, 15, 30, 0.75);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 2px solid rgba(255, 215, 0, 0.3);
+      border-radius: 60px;
+      padding: 50px 40px;
+      max-width: 550px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(255, 200, 50, 0.2) inset, 0 0 30px #f0b40040;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      border-color: #ffd966;
+      box-shadow: 0 40px 70px black, 0 0 0 3px #ffcc3340 inset, 0 0 60px #ffaa33;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #fff7d0, #ffe68f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+      text-shadow: 0 0 20px #ffd966;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: #b0c4de;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .subtitle i {
+      color: #ffbb33;
+      font-size: 1.8rem;
+      filter: drop-shadow(0 0 8px gold);
+    }
+
+    .btn-download {
+      background: linear-gradient(165deg, #2a1f0c, #3f3018);
+      border: 3px solid #ffcc33;
+      border-radius: 80px;
+      padding: 22px 40px;
+      width: 100%;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff2c0;
+      text-shadow: 0 3px 5px #32281a;
+      cursor: pointer;
+      transition: 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      box-shadow: 0 15px 25px #00000080, 0 5px 0 #644d1e inset, 0 -3px 0 #322613 inset;
+      margin: 35px 0 20px;
+    }
+
+    .btn-download i {
+      font-size: 2.2rem;
+      color: #ffdb7c;
+      filter: drop-shadow(0 0 8px #ffbb00);
+    }
+
+    .btn-download:hover {
+      transform: scale(1.03) translateY(-3px);
+      background: linear-gradient(165deg, #3f3018, #5a451f);
+      border-color: #ffe066;
+      box-shadow: 0 20px 30px black, 0 0 25px #ffcc33, 0 6px 0 #b3871e inset;
+    }
+
+    .btn-download:active {
+      transform: scale(0.98);
+      box-shadow: 0 5px 10px black;
+    }
+
+    .note {
+      color: #9aaec9;
+      margin: 25px 0 10px;
+      font-size: 1rem;
+      background: #0d122b80;
+      padding: 12px 18px;
+      border-radius: 60px;
+      display: inline-block;
+      border: 1px dashed #ffcc3360;
+    }
+
+    .note i {
+      color: #ffcc33;
+      margin: 0 6px;
+    }
+
+    .footer-icon {
+      margin-top: 25px;
+      color: #6c7fa0;
+      font-size: 1rem;
+    }
+
+    .footer-icon a {
+      color: #ffdb7c;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-icon a:hover {
+      text-decoration: underline;
+      color: #ffcc33;
+    }
+
+    /* Animasi glow halus */
+    @keyframes gentlePulse {
+      0% { text-shadow: 0 0 10px #ffd966; }
+      50% { text-shadow: 0 0 25px #ffe28a; }
+      100% { text-shadow: 0 0 10px #ffd966; }
+    }
+    h1 {
+      animation: gentlePulse 3s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>⚡ TUTORIAL VAULT ⚡</h1>
+    <div class="subtitle">
+      <i class="fas fa-crown"></i>
+      <span>Akses Eksklusif • Koleksi Terbatas</span>
+      <i class="fas fa-crown"></i>
+    </div>
+
+    <!-- INI TOMBOLNYA, TUAN! -->
+    <button class="btn-download" id="downloadBtn">
+      <i class="fas fa-download"></i> Download Video "Tutorial" <i class="fas fa-video"></i>
+    </button>
+
+    <div class="note">
+      <i class="fas fa-shield-alt"></i> 100% aman • langsung streaming • tanpa iklan <i class="fas fa-shield-alt"></i>
+    </div>
+
+    <div class="footer-icon">
+      <i class="fas fa-code"></i> • <a href="#" id="directLink">akses langsung</a> • 😈
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Link tujuan yang Tuan minta
+      const targetURL = 'https://youtube.com/shorts/O9jsgvW0r3Y?si=a-90ssJQf0bcLxtf';
+
+      // Ambil tombol berdasarkan ID
+      const btn = document.getElementById('downloadBtn');
+      const linkElement = document.getElementById('directLink');
+
+      // Fungsi untuk membuka URL di tab baru
+      function openTutorial(event) {
+        event.preventDefault(); // Mencegah perilaku default jika tombol di dalam form
+        window.open(targetURL, '_blank'); // '_blank' buka tab baru
+        // Atau bisa pake: window.location.href = targetURL; (untuk buka di tab yang sama)
+      }
+
+      // Pasang event listener ke tombol
+      btn.addEventListener('click', openTutorial);
+
+      // Opsional: juga pasang ke link "akses langsung" di footer biar makin fleksibel
+      if (linkElement) {
+        linkElement.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.open(targetURL, '_blank');
+        });
+        // Mengubah href agar terlihat rapi
+        linkElement.href = '#';
+      }
+
+      // Bonus: sedikit efek konyol biar makin nyata (opsional)
+      btn.addEventListener('mousedown', function() {
+        this.style.transform = 'scale(0.98)';
+      });
+      btn.addEventListener('mouseup', function() {
+        this.style.transform = 'scale(1.03)';
+      });
+      btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+      });
+    })();
+  </script>
+</body>
+</html>
